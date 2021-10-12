@@ -7,6 +7,7 @@ def load_df(path):
     except Exception:
         print("Something went wrong! No such file!")
         return
+
 if __name__ == "__main__":
     df =  load_df("Machine_Learning_Libraries\\dataset.csv")
     #a

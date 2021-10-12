@@ -24,7 +24,6 @@ def check_diagonal_primes(matrix_a):
     vfunc = np.vectorize(check_prime_num)
     return (diag_of_a_flip, np.count_nonzero(vfunc(diag_of_a_flip)))
 
-
 if __name__ == "__main__":
     np.random.seed(42)
     #a

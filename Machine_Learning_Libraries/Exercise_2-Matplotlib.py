@@ -53,6 +53,7 @@ def subplot(matrix_1, matrix_2, matrix_3, matrix_4):
     for ax in axs.flat:
         ax.label_outer()
     plt.show()
+
 if __name__ == "__main__":
     #a
     x = np.array([1, 2, 3, 4])
