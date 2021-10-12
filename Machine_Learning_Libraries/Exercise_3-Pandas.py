@@ -8,6 +8,13 @@ def load_df(path):
         print("Something went wrong! No such file!")
         return
 
+def print_array(arr):
+    active = {}
+    for i in range(len(arr)):
+        if arr[i] > 100:
+            active[i] = arr[i]
+    return active
+
 if __name__ == "__main__":
     df =  load_df("Machine_Learning_Libraries\\dataset.csv")
     #a
@@ -15,12 +22,9 @@ if __name__ == "__main__":
     #b
     print(df.iloc[:, 1:4])
     #c
-    active = {}
     active_minutes = df.iloc[:, 4]
-    # print(active_minutes)
+    print(active_minutes)
+
     active_minutes_array = np.array(active_minutes)
     print(active_minutes_array)
-    for i in range(len(active_minutes_array)):
-        if active_minutes_array[i] > 100:
-            active[i] = active_minutes_array[i]
-    print(active)
+    print(print_array(active_minutes_array))
