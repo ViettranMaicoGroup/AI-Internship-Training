@@ -56,9 +56,14 @@ class ListTechEmployee():
         print("*    List of employees selected using Python and having more projects: ")
         for i in range(employee_numbers):
             try:
-                print(f'Employee {i + 1}, \nFullName: {python_employees_having_projects[i].full_name},'
-                      f'\nDate of Birth: {python_employees_having_projects[i].date_of_birth} \nPosition: {python_employees_having_projects[i].position},'
-                      f'\nUse python : {"python" in python_employees_having_projects[i].languages_program} \nProject numbers: {python_employees_having_projects[i].projects}')
+                print(f"""
+                        Employee {i + 1}, 
+                        FullName: {python_employees_having_projects[i].full_name}
+                        Date of Birth: {python_employees_having_projects[i].date_of_birth}
+                        Position: {python_employees_having_projects[i].position}
+                        Use python : {"python" in python_employees_having_projects[i].languages_program} 
+                        Project numbers: {python_employees_having_projects[i].projects}
+                        """)
             except:
                 return
 
@@ -69,9 +74,13 @@ class ListTechEmployee():
         emp_under_30_having_more_5_projects = list(filter(lambda x: len(x.projects) >=5 , emp_under_30))
         print("*    List of employees under 30 and having more 5 projects: ")
         for i in range(len(emp_under_30_having_more_5_projects)):
-                print(f'Employee {i + 1}, \nFullName: {emp_under_30_having_more_5_projects[i].full_name}'
-                      f'\nDate of Birth: {emp_under_30_having_more_5_projects[i].date_of_birth} \nPosition: {emp_under_30_having_more_5_projects[i].position}'
-                      f'\nProject numbers: {emp_under_30_having_more_5_projects[i].projects}')
+                print(f"""
+                        Employee {i + 1}
+                        FullName: {emp_under_30_having_more_5_projects[i].full_name}
+                        Date of Birth: {emp_under_30_having_more_5_projects[i].date_of_birth}
+                        Position: {emp_under_30_having_more_5_projects[i].position}
+                        Project numbers: {emp_under_30_having_more_5_projects[i].projects}
+                        """)
 
 
 
