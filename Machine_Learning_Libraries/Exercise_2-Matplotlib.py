@@ -14,6 +14,7 @@ def plot_line_chart(X, Y):
     plt.ylabel("Tung độ")
     plt.show()
 
+
 def plot_bar_chart(X, Y):
     fig, ax = plt.subplots()
     index = np.arange(len(X))
@@ -37,6 +38,7 @@ def plot_bar_chart(X, Y):
     plt.tight_layout()
     plt.show()
 
+
 def subplot(MATRIX_1, MATRIX_2, MATRIX_3, MATRIX_4):
     fig, axs = plt.subplots(2, 2)
     fig.suptitle("ABC")
@@ -53,6 +55,7 @@ def subplot(MATRIX_1, MATRIX_2, MATRIX_3, MATRIX_4):
     for ax in axs.flat:
         ax.label_outer()
     plt.show()
+
 
 if __name__ == "__main__":
     #a
