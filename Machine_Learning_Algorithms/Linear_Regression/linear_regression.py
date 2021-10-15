@@ -54,7 +54,7 @@ if __name__ == "__main__":
     random.seed(42)
 
     #load data
-    path = "C:\\Users\\vietv\\PycharmProjects\\AI-Intership-MaicoGroup-Training\\Machine_Learning_Algorithms\\Linear_Regression\\linear_regression.csv"
+    path = "linear_regression.csv"
     data  = load_csv(path)
     print(data.shape)
 
