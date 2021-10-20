@@ -65,11 +65,11 @@ if __name__ == "__main__":
 
     #Initizlize w, assign eta and gamma values and apply gradient momentum to find valid straight line
     w_init = [[2], [1]]
-    eta = 0.00001
+    eta = 0.0001
     gamma = 0.9
     w_0, w_1, i = GD_momentum(w_init, Xbar, y, eta, gamma)
     print(w_0, w_1)
-
+    print(i)
     # Show out real values and predict values to evaluate algorithms easily
     y_test_predict = np.array(list(map(lambda var: var * w_1 + w_0, X_test)))
     print("Real: \n", y_test.reshape(-1))
