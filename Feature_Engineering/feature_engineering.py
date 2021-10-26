@@ -6,6 +6,7 @@ from sklearn.model_selection import train_test_split
 from tensorflow.keras.preprocessing.text import Tokenizer
 from sklearn.linear_model import LinearRegression
 from sklearn.linear_model import LogisticRegression
+import matplotlib.pyplot as plt
 
 
 def load_csv(path):
@@ -98,14 +99,20 @@ if __name__ == '__main__':
     # print(new_X)
     # print(y)
 
-    #Initialize constant
-    max_length = 160
-    vocab_size = 10000
     test_size = 0.2
 
     #split train, test data
     X_train, X_test, y_train, y_test = new_train_test_split(X, y, test_size=test_size)
     print(X_train)
+
+
+    #Initialize constant
+    max_length = 160
+    string_ = ''
+    for i in X_train:
+        string_ += i
+    print(len(set(string_.split(' '))))
+    vocab_size = len(set(string_.split(' ')))
 
     #Aplly Linear Regression to classification
     print(X_train)
